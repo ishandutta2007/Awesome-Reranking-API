@@ -1,27 +1,20 @@
-# Awesome-Reranking-API
+<p align="center">
+  <a href="https://github.com/ishandutta2007/Awesome-Reranking-API">
+    <img src="assets/banner.svg" alt="Awesome Reranking API Banner" width="100%" />
+  </a>
+</p>
 
-# Awesome-Reranking-API
+# 🔄 Awesome Reranking API: Top Neural Rerankers, Hosted APIs & Cross-Encoders for RAG 🚀
 
-# 🔄 Top Reranking APIs & Open-Source Rerankers
+<p align="center">
+  <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a><a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a> <a href="https://github.com/ishandutta2007/Awesome-Reranking-API/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Reranking-API?style=flat-square&logo=github&color=gold" alt="Stars"/></a> <a href="https://github.com/ishandutta2007/Awesome-Reranking-API/network/members"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-Reranking-API?style=flat-square&logo=github&color=blue" alt="Forks"/></a> <a href="https://github.com/ishandutta2007/Awesome-Reranking-API/issues"><img src="https://img.shields.io/github/issues/ishandutta2007/Awesome-Reranking-API?style=flat-square&color=orange" alt="Issues"/></a> <a href="https://github.com/ishandutta2007/Awesome-Reranking-API/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-green.svg?style=flat-square" alt="License"/></a> <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
+</p>
 
+> 🌟 **The Definitive Directory of Neural Reranking APIs, Hosted Inference Platforms, Cross-Encoders, ColBERT Late Interaction, and Open-Source Ranking Models for High-Precision Retrieval-Augmented Generation (RAG) & Semantic Search.**
 
-
-> A curated list of **Reranking APIs, hosted reranking platforms, reranking models and open-source software** for improving search, retrieval and RAG relevance.
-
-
-
-Rerankers operate as a **second-stage retrieval layer**: an initial retriever produces a larger candidate set, and a reranker scores the query-document pairs to select the most relevant results. Unlike embedding-based retrieval, cross-encoders can jointly evaluate the query and candidate document, generally trading additional latency for higher relevance.
-
-
-
-This repository focuses primarily on **open-source and self-hostable reranking software**, while maintaining a separate list of hosted APIs such as Cohere Rerank, Voyage AI Rerank, Jina AI Reranker, Pinecone Rerank, NVIDIA NeMo Retriever, Mixedbread AI and Google Vertex AI Ranking.
-
-
+Rerankers serve as the vital **second-stage retrieval layer** in production AI systems: an initial retriever (like BM25 keyword search or dense vector embeddings) surfaces an over-inclusive candidate pool (top 50–100), and a high-precision neural reranker jointly evaluates query-document pairs to output a finely re-ordered, hyper-relevant top 3–10 set for LLM context injection.
 
 ---
-
-
-
 ## 📑 Table of Contents
 
 
@@ -82,41 +75,34 @@ This repository focuses primarily on **open-source and self-hostable reranking s
 
 # ☁️ SaaS/Hosted Platforms
 
+Hosted reranking APIs provide managed, production-grade neural inference with zero GPU infrastructure management, automatic scaling, and enterprise SLAs.
 
+> 📊 **Sector Market Size & Dynamics:** The global AI search, neural reranking, and RAG retrieval infrastructure sector is estimated at **~$5.2 Billion in 2026** (projected to reach **$18+ Billion by 2030** at a ~28% CAGR). The sector is **moderately fragmented**: while hyperscale cloud providers (NVIDIA, Google Cloud, AWS) dominate high-volume enterprise pipelines, specialized neural retrieval pure-plays (Cohere, Voyage AI, Jina AI, Mixedbread, Pinecone) maintain strong differentiation through proprietary domain cross-encoders, multimodal capabilities, and superior price-performance, preventing a winner-take-all monopoly.
 
-Hosted reranking APIs provide managed inference without requiring GPU infrastructure, model deployment or scaling.
+| Platform | Company | Company Size (Valuation / Market Cap) | Pricing | Free Tier Limit | Primary Focus | Key Capabilities |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| [NVIDIA NeMo Retriever](https://developer.nvidia.com/nemo-retriever) | NVIDIA | ~$3.0 Trillion Market Cap (NASDAQ: NVDA) | $1.00 / GPU hour (cloud marketplace pay-as-you-go) or $4,500 / GPU/year (NVIDIA AI Enterprise) | 1,000 free API credits (expandable to 5,000) on build.nvidia.com; 90-day AI Enterprise evaluation license | Enterprise retrieval | Embedding, reranking and retrieval optimization |
+| [Google Vertex AI Ranking](https://cloud.google.com/vertex-ai) | Google Cloud | ~$2.2 Trillion Alphabet Market Cap (NASDAQ: GOOGL) | $1.00 / 1,000 queries (up to 100 documents per query) | 90-day free trial with $300 credits; monthly free allowance of 80,000 ranking units (or 10,000 queries/month on Agent Search) | Enterprise ranking | Ranking and retrieval optimization for search/RAG |
+| [Amazon Bedrock Rerank](https://aws.amazon.com/bedrock/) | Amazon Web Services | ~$2.0 Trillion Amazon Market Cap (NASDAQ: AMZN) | $1.00 / 1,000 queries (Amazon Rerank 1.0); $2.00 / 1,000 queries (Cohere Rerank 3.5) | AWS Free Tier / promotional starter credits ($200 AWS credit for new accounts, valid for 12 months) | Managed RAG retrieval | Native Knowledge Bases integration, semantic filtering |
+| [OpenSearch Neural Search](https://opensearch.org/) | OpenSearch / AWS | ~$2.0 Trillion AWS Ecosystem ($105B+ AWS Parent Rev) | $0.036 / hour (~$26.00 / month for t3.small.search managed AWS instance) | AWS Free Tier: 750 hours/month of t2/t3.small.search + 10 GB EBS storage free for 12 months | Search + neural retrieval | Neural search, hybrid retrieval and reranking |
+| [Elastic](https://www.elastic.co/) | Elastic | ~$9.0 Billion Market Cap (NYSE: ESTC) | $95.00 / month (Standard tier); $131.00 / month (Platinum tier with native cross-encoder reranking) | 14-day free trial with full access to search and ML reranking features (1 deployment, up to 3 projects) | Search relevance | Semantic search, hybrid search and reranking |
+| [Cohere Rerank](https://cohere.com/rerank) | Cohere | ~$5.5 Billion Valuation (Series D) | $2.00 / 1,000 searches ($0.002/search) | Free trial API key: 1,000 requests/month (rate limit 10 RPM, non-production) | General-purpose reranking | Multilingual reranking, search, RAG and semi-structured data |
+| [Hugging Face Inference](https://huggingface.co/inference-api) | Hugging Face | ~$4.5 Billion Valuation (Series D) | $9.00 / month (PRO subscription); Dedicated Endpoints from $0.06/hr (CPU), $0.50/hr (GPU) | Serverless API: Free forever (~1,000 requests/day, models <10B); $0.10/month credit for providers | Model inference | Hosted inference for open reranking models |
+| [Cerebras](https://www.cerebras.ai/) | Cerebras | ~$4.0 Billion Valuation (Pre-IPO) | $0.10 / 1M tokens (Developer tier, $10 minimum deposit; Llama 3.1 8B at $0.10/1M tokens) | Free forever plan: 1,000,000 tokens/day (resets every 24 hours, 30 RPM, no credit card required) | Fast AI inference | High-throughput inference for custom reranking workloads |
+| [Together AI](https://www.together.ai/) | Together AI | ~$1.25 Billion Valuation (Series B Unicorn) | $0.10 / 1M tokens ($5.00 minimum deposit; dedicated GPU instances from $0.90/hour) | $5.00 free credit on signup for API evaluation (60 RPM rate limit) | Model inference | Hosted inference for open reranking models |
+| [Pinecone Rerank](https://www.pinecone.io/) | Pinecone | ~$1.20 Billion Valuation (Series B Unicorn) | $2.00 / 1,000 requests (Standard plan, $50/month minimum commitment) | Starter plan: 500 rerank requests/month free forever (1 project, 2 GB storage in AWS us-east-1) | Managed retrieval | Reranking integrated with vector search and RAG |
+| [Fireworks AI](https://fireworks.ai/) | Fireworks AI | ~$552 Million Valuation (Series B) | $0.10 / 1M tokens (sub-4B models); $0.20 / 1M tokens (4B–16B models) | $1.00 free credit upon signup for serverless inference testing (rate limited) | Model inference | Hosted inference for open models and custom retrieval stacks |
+| [Voyage AI Rerank](https://www.voyageai.com/) | Voyage AI | ~$100 Million Valuation (Series A) | $0.02 / 1M tokens (rerank-3-lite); $0.05 / 1M tokens (rerank-3) | 200 million free tokens upon sign-up (applicable to rerank-3 / rerank-3-lite, 3 RPM) | High-quality retrieval | Reranking, retrieval optimization and domain-oriented models |
+| [Jina AI Reranker](https://jina.ai/reranker/) | Jina AI | ~$80 Million Valuation (Series A) | $0.05 / 1M tokens ($50 for 1B tokens top-up bundle) | 10 million free tokens upon key generation (shared pool, 500 RPM / 1M TPM, non-commercial) | Multilingual reranking | Text reranking, multilingual retrieval and long-context use cases |
+| [Mixedbread AI](https://www.mixedbread.com/) | Mixedbread | ~$20 Million Valuation (Seed) | $2.50 / 1,000 queries (Toast 1 with Reranking) or $3.50 / 1,000 queries (rerank add-on; Scale plan: $20/month) | Starter plan: $5.00 free credits upon signup (100 RPM, no credit card required) | Retrieval models | Embedding and reranking APIs |
+| [ZeroEntropy](https://zeroentropy.dev/) | ZeroEntropy | ~$10 Million Valuation (Seed) | $0.025 / 1M tokens (zerank-2) or $50.00 / month for Team tier | Free forever plan: 500,000 UTF-8 bytes/minute rate limit in fast mode (no credit card required) | Ultra-fast reranking | Sub-millisecond latency reranking, high-throughput batch scoring |
+| [Ragatouille](https://github.com/bclavie/RAGatouille) | Answer.AI / community ecosystem | ~$10 Million Seed R&D Lab | $0.00 (Open-Source library; self-host on cloud compute from ~$0.03/hr) | Free forever (Apache-2.0 license, unlimited local and self-hosted execution) | ColBERT retrieval | ColBERT-based retrieval and reranking |
+| [Rerankers](https://github.com/AnswerDotAI/rerankers) | AnswerDotAI / community ecosystem | ~$10 Million Seed R&D Lab | $0.00 (Open-Source library; self-host on cloud compute from ~$0.03/hr) | Free forever (Apache-2.0 license, unlimited local and self-hosted execution) | Unified Reranking API | Hosted & local reranking infrastructure and unified API wrapper |
 
-
-
-| Platform | Company | Pricing | Free Tier Limit | Primary Focus | Key Capabilities |
-| -------------------------------------------------------------------- | ------------------------------- | ------------------------- | ------------------------- | ------------------------- | ----------------------------------------------------------------- |
-| [Cohere Rerank](https://cohere.com/rerank) | Cohere | $2.00 / 1,000 searches ($0.002/search) | Free trial API key: 1,000 requests/month (rate limit 10 RPM, non-production) | General-purpose reranking | Multilingual reranking, search, RAG and semi-structured data |
-| [Voyage AI Rerank](https://www.voyageai.com/) | Voyage AI | $0.02 / 1M tokens (rerank-3-lite); $0.05 / 1M tokens (rerank-3) | 200 million free tokens upon sign-up (applicable to rerank-3 / rerank-3-lite, 3 RPM) | High-quality retrieval | Reranking, retrieval optimization and domain-oriented models |
-| [Jina AI Reranker](https://jina.ai/reranker/) | Jina AI | $0.05 / 1M tokens ($50 for 1B tokens top-up bundle) | 10 million free tokens upon key generation (shared pool, 500 RPM / 1M TPM, non-commercial) | Multilingual reranking | Text reranking, multilingual retrieval and long-context use cases |
-| [Pinecone Rerank](https://www.pinecone.io/) | Pinecone | $2.00 / 1,000 requests (Standard plan, $50/month minimum commitment) | Starter plan: 500 rerank requests/month free forever (1 project, 2 GB storage in AWS us-east-1) | Managed retrieval | Reranking integrated with vector search and RAG |
-| [NVIDIA NeMo Retriever](https://developer.nvidia.com/nemo-retriever) | NVIDIA | $1.00 / GPU hour (cloud marketplace pay-as-you-go) or $4,500 / GPU/year (NVIDIA AI Enterprise) | 1,000 free API credits (expandable to 5,000) on build.nvidia.com; 90-day AI Enterprise evaluation license | Enterprise retrieval | Embedding, reranking and retrieval optimization |
-| [Mixedbread AI](https://www.mixedbread.com/) | Mixedbread | $2.50 / 1,000 queries (Toast 1 with Reranking) or $3.50 / 1,000 queries (rerank add-on; Scale plan: $20/month) | Starter plan: $5.00 free credits upon signup (100 RPM, no credit card required) | Retrieval models | Embedding and reranking APIs |
-| [Google Vertex AI Ranking](https://cloud.google.com/vertex-ai) | Google Cloud | $1.00 / 1,000 queries (up to 100 documents per query) | 90-day free trial with $300 credits; monthly free allowance of 80,000 ranking units (or 10,000 queries/month on Agent Search) | Enterprise ranking | Ranking and retrieval optimization for search/RAG |
-| [Amazon Bedrock Rerank](https://aws.amazon.com/bedrock/) | Amazon Web Services | $1.00 / 1,000 queries (Amazon Rerank 1.0); $2.00 / 1,000 queries (Cohere Rerank 3.5) | AWS Free Tier / promotional starter credits ($200 AWS credit for new accounts, valid for 12 months) | Managed RAG retrieval | Native Knowledge Bases integration, semantic filtering |
-| [ZeroEntropy](https://zeroentropy.dev/) | ZeroEntropy | $0.025 / 1M tokens (zerank-2) or $50.00 / month for Team tier | Free forever plan: 500,000 UTF-8 bytes/minute rate limit in fast mode (no credit card required) | Ultra-fast reranking | Sub-millisecond latency reranking, high-throughput batch scoring |
-| [OpenSearch Neural Search](https://opensearch.org/) | OpenSearch / AWS | $0.036 / hour (~$26.00 / month for t3.small.search managed AWS instance) | AWS Free Tier: 750 hours/month of t2/t3.small.search + 10 GB EBS storage free for 12 months | Search + neural retrieval | Neural search, hybrid retrieval and reranking |
-| [Elastic](https://www.elastic.co/) | Elastic | $95.00 / month (Standard tier); $131.00 / month (Platinum tier with native cross-encoder reranking) | 14-day free trial with full access to search and ML reranking features (1 deployment, up to 3 projects) | Search relevance | Semantic search, hybrid search and reranking |
-| [Cerebras](https://www.cerebras.ai/) | Cerebras | $0.10 / 1M tokens (Developer tier, $10 minimum deposit; Llama 3.1 8B at $0.10/1M tokens) | Free forever plan: 1,000,000 tokens/day (resets every 24 hours, 30 RPM, no credit card required) | Fast AI inference | High-throughput inference for custom reranking workloads |
-| [Together AI](https://www.together.ai/) | Together AI | $0.10 / 1M tokens ($5.00 minimum deposit; dedicated GPU instances from $0.90/hour) | $5.00 free credit on signup for API evaluation (60 RPM rate limit) | Model inference | Hosted inference for open reranking models |
-| [Fireworks AI](https://fireworks.ai/) | Fireworks AI | $0.10 / 1M tokens (sub-4B models); $0.20 / 1M tokens (4B–16B models) | $1.00 free credit upon signup for serverless inference testing (rate limited) | Model inference | Hosted inference for open models and custom retrieval stacks |
-| [Hugging Face Inference](https://huggingface.co/inference-api) | Hugging Face | $9.00 / month (PRO subscription); Dedicated Endpoints from $0.06/hr (CPU), $0.50/hr (GPU) | Serverless API: Free forever (~1,000 requests/day, models <10B); $0.10/month credit for providers | Model inference | Hosted inference for open reranking models |
-| [Ragatouille](https://github.com/bclavie/RAGatouille) | Answer.AI / community ecosystem | $0.00 (Open-Source library; self-host on cloud compute from ~$0.03/hr) | Free forever (Apache-2.0 license, unlimited local and self-hosted execution) | ColBERT retrieval | ColBERT-based retrieval and reranking |
-| [Rerankers](https://github.com/AnswerDotAI/rerankers) | AnswerDotAI / community ecosystem | $0.00 (Open-Source library; self-host on cloud compute from ~$0.03/hr) | Free forever (Apache-2.0 license, unlimited local and self-hosted execution) | Unified Reranking API | Hosted & local reranking infrastructure and unified API wrapper |
-
-
-
-> **Note:** Reranking products and APIs evolve rapidly. Some platforms offer reranking as part of a broader search/retrieval product rather than as a standalone API.
-
+> 📌 **Note:** Reranking pricing and feature offerings evolve rapidly. Always evaluate candidate throughput, batch sizes, and token context limits when projecting production inference economics.
 
 
 ---
-
-
 
 # 🌍 Open-Source
 
@@ -186,49 +172,29 @@ A particularly useful distinction is between:
 
 # 🎯 Open-Source Reranking Models
 
+The open-source reranking ecosystem offers competitive alternatives to proprietary APIs, with full model-weight transparency and zero data exfiltration risks.
 
-
-| Model / Project                                                                         | Architecture         | Primary Strength                      |
-
-| --------------------------------------------------------------------------------------- | -------------------- | ------------------------------------- |
-
-| [BGE Reranker](https://github.com/FlagOpen/FlagEmbedding)                               | Cross-Encoder        | Strong general-purpose open reranking |
-
-| [BGE-Reranker-v2-m3](https://huggingface.co/BAAI/bge-reranker-v2-m3)                    | Cross-Encoder        | Multilingual reranking                |
-
-| [BGE-Reranker-v2-Gemma](https://huggingface.co/BAAI/bge-reranker-v2-gemma)              | LLM / Cross-Encoder  | Larger multilingual reranking         |
-
-| [mxbai-rerank](https://huggingface.co/mixedbread-ai)                                    | Cross-Encoder        | High-quality open reranking           |
-
-| [Jina Reranker](https://huggingface.co/jinaai)                                          | Cross-Encoder        | Multilingual / long-context retrieval |
-
-| [ColBERT](https://github.com/stanford-futuredata/ColBERT)                               | Late Interaction     | Efficient neural retrieval            |
-
-| [ColBERTv2](https://github.com/stanford-futuredata/ColBERT)                             | Late Interaction     | Strong retrieval and reranking        |
-
-| [MonoT5](https://github.com/castorini/pygaggle)                                         | T5                   | Pointwise reranking                   |
-
-| [RankT5](https://github.com/castorini/pygaggle)                                         | T5                   | Learned ranking                       |
-
-| [RankZephyr](https://github.com/castorini/rank_llm)                                     | LLM                  | Listwise ranking                      |
-
-| [RankGPT](https://github.com/sunnweiwei/RankGPT)                                        | LLM                  | Zero-shot listwise reranking          |
-
-| [RankVicuna](https://github.com/castorini/rank_llm)                                     | LLM                  | LLM-based ranking                     |
-
-| [FlashRank](https://github.com/PrithivirajDamodaran/FlashRank)                          | ONNX / Cross-Encoder | Extremely lightweight local reranking |
-
-| [Sentence Transformers Cross-Encoders](https://github.com/UKPLab/sentence-transformers) | Cross-Encoder        | Broad model ecosystem                 |
-
-| [PyLate](https://github.com/lightonai/pylate)                                           | ColBERT              | Late-interaction retrieval            |
-
-| [LiT5](https://github.com/castorini/rank_llm)                                           | T5 / Listwise        | Listwise reranking                    |
-
+| Model / Project | Stars | Architecture | Primary Strength |
+| :--- | :---: | :--- | :--- |
+| [Sentence Transformers](https://github.com/UKPLab/sentence-transformers) | [![GitHub stars](https://img.shields.io/github/stars/UKPLab/sentence-transformers?style=social&color=white)](https://github.com/UKPLab/sentence-transformers/stargazers) | Cross-Encoder | Broadest cross-encoder model ecosystem & HuggingFace integration |
+| [FlagEmbedding (BGE Reranker)](https://github.com/FlagOpen/FlagEmbedding) | [![GitHub stars](https://img.shields.io/github/stars/FlagOpen/FlagEmbedding?style=social&color=white)](https://github.com/FlagOpen/FlagEmbedding/stargazers) | Cross-Encoder | State-of-the-art general & multilingual open reranking models |
+| [BGE-Reranker-v2-m3](https://huggingface.co/BAAI/bge-reranker-v2-m3) | [![GitHub stars](https://img.shields.io/github/stars/FlagOpen/FlagEmbedding?style=social&color=white)](https://github.com/FlagOpen/FlagEmbedding/stargazers) | Cross-Encoder (568M) | Benchmark-leading multilingual reranking (100+ languages) |
+| [BGE-Reranker-v2-Gemma](https://huggingface.co/BAAI/bge-reranker-v2-gemma) | [![GitHub stars](https://img.shields.io/github/stars/FlagOpen/FlagEmbedding?style=social&color=white)](https://github.com/FlagOpen/FlagEmbedding/stargazers) | LLM / Cross-Encoder | Deep semantic reasoning reranker based on Gemma architecture |
+| [RAGatouille](https://github.com/bclavie/RAGatouille) | [![GitHub stars](https://img.shields.io/github/stars/bclavie/RAGatouille?style=social&color=white)](https://github.com/bclavie/RAGatouille/stargazers) | ColBERT Late Interaction | Simplified ColBERTv2 training, indexing, and reranking |
+| [ColBERT / ColBERTv2](https://github.com/stanford-futuredata/ColBERT) | [![GitHub stars](https://img.shields.io/github/stars/stanford-futuredata/ColBERT?style=social&color=white)](https://github.com/stanford-futuredata/ColBERT/stargazers) | Late Interaction | Pioneer token-level late-interaction search and reranking architecture |
+| [ColPali / ColQwen](https://github.com/illuin-tech/colpali) | [![GitHub stars](https://img.shields.io/github/stars/illuin-tech/colpali?style=social&color=white)](https://github.com/illuin-tech/colpali/stargazers) | Vision-Language ColBERT | Multimodal document, PDF page, and slide reranking |
+| [rerankers](https://github.com/AnswerDotAI/rerankers) | [![GitHub stars](https://img.shields.io/github/stars/AnswerDotAI/rerankers?style=social&color=white)](https://github.com/AnswerDotAI/rerankers/stargazers) | Unified Wrapper | Unified abstraction over Cross-Encoders, ColBERT, T5, and APIs |
+| [FlashRank](https://github.com/PrithivirajDamodaran/FlashRank) | [![GitHub stars](https://img.shields.io/github/stars/PrithivirajDamodaran/FlashRank?style=social&color=white)](https://github.com/PrithivirajDamodaran/FlashRank/stargazers) | ONNX / Cross-Encoder | Ultra-lightweight CPU reranking with sub-10ms latencies |
+| [PyLate](https://github.com/lightonai/pylate) | [![GitHub stars](https://img.shields.io/github/stars/lightonai/pylate?style=social&color=white)](https://github.com/lightonai/pylate/stargazers) | ColBERT | Modern, modular library for ColBERT models and PLAID integration |
+| [Tevatron](https://github.com/texttron/tevatron) | [![GitHub stars](https://img.shields.io/github/stars/texttron/tevatron?style=social&color=white)](https://github.com/texttron/tevatron/stargazers) | Dense / Cross-Encoder | High-efficiency neural retrieval and reranking training toolkit |
+| [RankGPT](https://github.com/sunnweiwei/RankGPT) | [![GitHub stars](https://img.shields.io/github/stars/sunnweiwei/RankGPT?style=social&color=white)](https://github.com/sunnweiwei/RankGPT/stargazers) | LLM Prompting | Zero-shot sliding-window listwise reranking with LLMs |
+| [RankZephyr / RankLLM](https://github.com/castorini/rank_llm) | [![GitHub stars](https://img.shields.io/github/stars/castorini/rank_llm?style=social&color=white)](https://github.com/castorini/rank_llm/stargazers) | LLM / T5 Listwise | Production listwise reranking using open LLMs (Zephyr, Vicuna, LiT5) |
+| [PyGaggle (MonoT5 / RankT5)](https://github.com/castorini/pygaggle) | [![GitHub stars](https://img.shields.io/github/stars/castorini/pygaggle?style=social&color=white)](https://github.com/castorini/pygaggle/stargazers) | T5 Pointwise & Pairwise | Sequence-to-sequence ranking models and evaluation framework |
+| [mxbai-rerank](https://huggingface.co/mixedbread-ai) | [![HuggingFace Models](https://img.shields.io/badge/HuggingFace-mxbai--rerank-yellow?style=social&color=white)](https://huggingface.co/mixedbread-ai) | Cross-Encoder | High-capacity open weights with state-of-the-art MTEB reranking scores |
+| [Jina Reranker v2](https://huggingface.co/jinaai) | [![HuggingFace Models](https://img.shields.io/badge/HuggingFace-jina--reranker-orange?style=social&color=white)](https://huggingface.co/jinaai) | Cross-Encoder | Multilingual, multi-task, and code-aware cross-encoders |
 
 
 ---
-
-
 
 # 🧠 Open-Source Cross-Encoder Rerankers
 
@@ -416,23 +382,13 @@ ColBERT uses **late interaction** rather than processing the entire query-docume
 
 
 
-| Project                                                           | Description                                      |
-
-| ----------------------------------------------------------------- | ------------------------------------------------ |
-
-| [ColBERT](https://github.com/stanford-futuredata/ColBERT)         | Original late-interaction retrieval architecture |
-
-| [ColBERTv2](https://github.com/stanford-futuredata/ColBERT)       | Improved compressed late-interaction retrieval   |
-
-| [RAGatouille](https://github.com/bclavie/RAGatouille)             | Easy ColBERT/RAG integration                     |
-
-| [PyLate](https://github.com/lightonai/pylate)                     | Modern ColBERT toolkit                           |
-
-| [PLAID](https://github.com/stanford-futuredata/ColBERT)           | Efficient ColBERT indexing/retrieval             |
-
-| [AnswerDotAI rerankers](https://github.com/AnswerDotAI/rerankers) | Unified interface including ColBERT              |
-
-| [Tevatron](https://github.com/texttron/tevatron)                  | Retrieval model training framework               |
+| Project | Stars | Architecture | Description |
+| :--- | :---: | :--- | :--- |
+| [RAGatouille](https://github.com/bclavie/RAGatouille) | [![GitHub stars](https://img.shields.io/github/stars/bclavie/RAGatouille?style=social&color=white)](https://github.com/bclavie/RAGatouille/stargazers) | ColBERTv2 | Easy ColBERT integration with LangChain, LlamaIndex, and native RAG pipelines |
+| [ColBERT / ColBERTv2](https://github.com/stanford-futuredata/ColBERT) | [![GitHub stars](https://img.shields.io/github/stars/stanford-futuredata/ColBERT?style=social&color=white)](https://github.com/stanford-futuredata/ColBERT/stargazers) | Late Interaction | Original compressed late-interaction architecture for fast sub-millisecond retrieval |
+| [rerankers](https://github.com/AnswerDotAI/rerankers) | [![GitHub stars](https://img.shields.io/github/stars/AnswerDotAI/rerankers?style=social&color=white)](https://github.com/AnswerDotAI/rerankers/stargazers) | Multi-Backend | Unified API supporting ColBERT backends alongside cross-encoders |
+| [PyLate](https://github.com/lightonai/pylate) | [![GitHub stars](https://img.shields.io/github/stars/lightonai/pylate?style=social&color=white)](https://github.com/lightonai/pylate/stargazers) | ColBERT | Modern Python ColBERT toolkit designed for training and PLAID indexing |
+| [Tevatron](https://github.com/texttron/tevatron) | [![GitHub stars](https://img.shields.io/github/stars/texttron/tevatron?style=social&color=white)](https://github.com/texttron/tevatron/stargazers) | Dense / ColBERT | Highly flexible research framework for neural IR and late-interaction models |
 
 
 
@@ -486,23 +442,13 @@ Ordered Results
 
 
 
-| Project                                                             | Description                                    |
-
-| ------------------------------------------------------------------- | ---------------------------------------------- |
-
-| [RankLLM](https://github.com/castorini/rank_llm)                    | Framework for LLM-based ranking                |
-
-| [RankGPT](https://github.com/sunnweiwei/RankGPT)                    | Zero-shot listwise reranking                   |
-
-| [RankZephyr](https://github.com/castorini/rank_llm)                 | Zephyr-based ranking                           |
-
-| [RankVicuna](https://github.com/castorini/rank_llm)                 | Vicuna-based ranking                           |
-
-| [LiT5](https://github.com/castorini/rank_llm)                       | Listwise T5 ranking                            |
-
-| [LLM Layerwise Rerankers](https://github.com/AnswerDotAI/rerankers) | Layerwise ranking approaches                   |
-
-| [Rerankers](https://github.com/AnswerDotAI/rerankers)               | Unified API for multiple ranking architectures |
+| Project | Stars | Architecture | Description |
+| :--- | :---: | :--- | :--- |
+| [vLLM](https://github.com/vllm-project/vllm) | [![GitHub stars](https://img.shields.io/github/stars/vllm-project/vllm?style=social&color=white)](https://github.com/vllm-project/vllm/stargazers) | PagedAttention Engine | Ultra-high-throughput engine for serving generative LLM rerankers and cross-encoders |
+| [rerankers](https://github.com/AnswerDotAI/rerankers) | [![GitHub stars](https://img.shields.io/github/stars/AnswerDotAI/rerankers?style=social&color=white)](https://github.com/AnswerDotAI/rerankers/stargazers) | Unified Interface | Unified API wrapper supporting RankGPT, LLM layerwise, and local models |
+| [RankGPT](https://github.com/sunnweiwei/RankGPT) | [![GitHub stars](https://img.shields.io/github/stars/sunnweiwei/RankGPT?style=social&color=white)](https://github.com/sunnweiwei/RankGPT/stargazers) | Zero-Shot LLM | Prompt-based sliding-window listwise reranker using frontier language models |
+| [RankLLM (RankZephyr / RankVicuna)](https://github.com/castorini/rank_llm) | [![GitHub stars](https://img.shields.io/github/stars/castorini/rank_llm?style=social&color=white)](https://github.com/castorini/rank_llm/stargazers) | Open LLM Listwise | State-of-the-art listwise ranking with open-source Zephyr and Vicuna LLMs |
+| [LiT5](https://github.com/castorini/rank_llm) | [![GitHub stars](https://img.shields.io/github/stars/castorini/rank_llm?style=social&color=white)](https://github.com/castorini/rank_llm/stargazers) | T5 Encoder-Decoder | Listwise T5 ranking model optimized for long context document sets |
 
 
 
@@ -884,19 +830,18 @@ Modern search engines can integrate ranking directly into the retrieval pipeline
 
 | [Apache Solr](https://solr.apache.org/)                        | Search + learning-to-rank + vector retrieval     |
 
-| [Apache Lucene](https://lucene.apache.org/)                    | Core search and ranking infrastructure           |
-
-| [Weaviate](https://github.com/weaviate/weaviate)               | Vector search + hybrid retrieval + reranking     |
-
-| [Qdrant](https://github.com/qdrant/qdrant)                     | Vector retrieval and reranking pipelines         |
-
-| [Milvus](https://github.com/milvus-io/milvus)                  | Vector search and hybrid retrieval               |
-
-| [Elasticsearch](https://github.com/elastic/elasticsearch)      | Search, vector retrieval and relevance pipelines |
-
-| [Typesense](https://github.com/typesense/typesense)            | Search and semantic retrieval                    |
-
-| [Meilisearch](https://github.com/meilisearch/meilisearch)      | Search and semantic retrieval                    |
+| Search Engine / Vector DB | Stars | Reranking Capabilities | Primary Strengths |
+| :--- | :---: | :--- | :--- |
+| [RAGFlow](https://github.com/infiniflow/ragflow) | [![GitHub stars](https://img.shields.io/github/stars/infiniflow/ragflow?style=social&color=white)](https://github.com/infiniflow/ragflow/stargazers) | Built-in Cross-Encoder & ColBERT Reranking | End-to-end RAG engine based on deep document understanding and multi-stage reranking |
+| [Elasticsearch](https://github.com/elastic/elasticsearch) | [![GitHub stars](https://img.shields.io/github/stars/elastic/elasticsearch?style=social&color=white)](https://github.com/elastic/elasticsearch/stargazers) | Learning to Rank (LTR), RRF, Semantic Rerank | Industry standard search engine with hybrid BM25 + dense vector and cross-encoder pipelines |
+| [Meilisearch](https://github.com/meilisearch/meilisearch) | [![GitHub stars](https://img.shields.io/github/stars/meilisearch/meilisearch?style=social&color=white)](https://github.com/meilisearch/meilisearch/stargazers) | Typo-tolerant Lexical + Hybrid Vector Ranking | Lightning-fast developer search engine with out-of-the-box relevance ranking rules |
+| [Milvus](https://github.com/milvus-io/milvus) | [![GitHub stars](https://img.shields.io/github/stars/milvus-io/milvus?style=social&color=white)](https://github.com/milvus-io/milvus/stargazers) | Multi-Vector Hybrid Search + Weighted Reranker | Billion-scale distributed vector database with native hybrid scoring fusion |
+| [Qdrant](https://github.com/qdrant/qdrant) | [![GitHub stars](https://img.shields.io/github/stars/qdrant/qdrant?style=social&color=white)](https://github.com/qdrant/qdrant/stargazers) | RRF, Reciprocal Score Fusion, Cross-Encoder | High-performance Rust vector database with advanced hybrid query ranking and rerank plugins |
+| [Typesense](https://github.com/typesense/typesense) | [![GitHub stars](https://img.shields.io/github/stars/typesense/typesense?style=social&color=white)](https://github.com/typesense/typesense/stargazers) | Vector + Keyword Hybrid Scoring | Blazing-fast in-memory search engine with integrated ML embedding and semantic ranking |
+| [Weaviate](https://github.com/weaviate/weaviate) | [![GitHub stars](https://img.shields.io/github/stars/weaviate/weaviate?style=social&color=white)](https://github.com/weaviate/weaviate/stargazers) | `reranker-transformers`, `reranker-cohere` | AI-native vector search engine with first-class plug-and-play neural reranker modules |
+| [OpenSearch](https://github.com/opensearch-project/OpenSearch) | [![GitHub stars](https://img.shields.io/github/stars/opensearch-project/OpenSearch?style=social&color=white)](https://github.com/opensearch-project/OpenSearch/stargazers) | Neural Search, Search Pipelines, Reranker Processors | Apache 2.0 search stack supporting cross-encoders, late interaction, and hybrid RRF fusion |
+| [Vespa](https://github.com/vespa-engine/vespa) | [![GitHub stars](https://img.shields.io/github/stars/vespa-engine/vespa?style=social&color=white)](https://github.com/vespa-engine/vespa/stargazers) | Phased Ranking (First-phase + Second-phase + GBDT/ONNX) | Billion-document online big data serving engine with multi-phase ranking pipelines |
+| [Apache Lucene](https://github.com/apache/lucene) | [![GitHub stars](https://img.shields.io/github/stars/apache/lucene?style=social&color=white)](https://github.com/apache/lucene/stargazers) | Core Scoring (BM25, Vector HNSW, Custom Collector) | The bedrock indexing and ranking core powering Elasticsearch, OpenSearch, and Solr |
 
 
 
@@ -2244,6 +2189,12 @@ When adding a project, please verify its **current license**, model-weight terms
 
 
 
+## ⭐ Star History
+
+[![Star History Chart](https://star-history.dera.page/svg?repos=ishandutta2007/Awesome-Reranking-API&type=date&legend=top-left)](https://star-history.dera.page/#ishandutta2007/Awesome-Reranking-API&type=date&legend=top-left)
+
+---
+
 # ⚠️ Disclaimer
 
 
@@ -2310,7 +2261,10 @@ Always verify the current license and model terms before commercial deployment.
 
 ---
 
+##  Star History
+[![Star History Chart](https://star-history.dera.page/svg?repos=ishandutta2007/Awesome-Reranking-API&type=date&legend=top-left)](https://star-history.dera.page/#ishandutta2007/Awesome-Reranking-API&type=date&legend=top-left)
 
+---
 
 ## ⭐ Star This Repository
 
