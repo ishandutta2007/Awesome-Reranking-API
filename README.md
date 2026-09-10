@@ -88,39 +88,25 @@ Hosted reranking APIs provide managed inference without requiring GPU infrastruc
 
 
 
-| Platform                                                             | Company                         | Primary Focus             | Key Capabilities                                                  |
-
-| -------------------------------------------------------------------- | ------------------------------- | ------------------------- | ----------------------------------------------------------------- |
-
-| [Cohere Rerank](https://cohere.com/rerank)                           | Cohere                          | General-purpose reranking | Multilingual reranking, search, RAG and semi-structured data      |
-
-| [Voyage AI Rerank](https://www.voyageai.com/)                        | Voyage AI                       | High-quality retrieval    | Reranking, retrieval optimization and domain-oriented models      |
-
-| [Jina AI Reranker](https://jina.ai/reranker/)                        | Jina AI                         | Multilingual reranking    | Text reranking, multilingual retrieval and long-context use cases |
-
-| [Pinecone Rerank](https://www.pinecone.io/)                          | Pinecone                        | Managed retrieval         | Reranking integrated with vector search and RAG                   |
-
-| [NVIDIA NeMo Retriever](https://developer.nvidia.com/nemo-retriever) | NVIDIA                          | Enterprise retrieval      | Embedding, reranking and retrieval optimization                   |
-
-| [Ragatouille](https://github.com/bclavie/RAGatouille)                | Answer.AI / community ecosystem | ColBERT retrieval         | ColBERT-based retrieval and reranking                             |
-
-| [Mixedbread AI](https://www.mixedbread.com/)                         | Mixedbread                      | Retrieval models          | Embedding and reranking APIs                                      |
-
-| [Rerankers.io](https://rerankers.io/)                                | Rerankers                       | Reranking API             | Hosted reranking infrastructure                                   |
-
-| [Google Vertex AI Ranking](https://cloud.google.com/vertex-ai)       | Google Cloud                    | Enterprise ranking        | Ranking and retrieval optimization for search/RAG                 |
-
-| [OpenSearch Neural Search](https://opensearch.org/)                  | OpenSearch                      | Search + neural retrieval | Neural search, hybrid retrieval and reranking                     |
-
-| [Elastic](https://www.elastic.co/)                                   | Elastic                         | Search relevance          | Semantic search, hybrid search and reranking                      |
-
-| [Cerebras](https://www.cerebras.ai/)                                 | Cerebras                        | Fast AI inference         | High-throughput inference for custom reranking workloads          |
-
-| [Together AI](https://www.together.ai/)                              | Together AI                     | Model inference           | Hosted inference for open reranking models                        |
-
-| [Fireworks AI](https://fireworks.ai/)                                | Fireworks AI                    | Model inference           | Hosted inference for open models and custom retrieval stacks      |
-
-| [Hugging Face Inference](https://huggingface.co/inference-api)       | Hugging Face                    | Model inference           | Hosted inference for open reranking models                        |
+| Platform | Company | Pricing | Free Tier Limit | Primary Focus | Key Capabilities |
+| -------------------------------------------------------------------- | ------------------------------- | ------------------------- | ------------------------- | ------------------------- | ----------------------------------------------------------------- |
+| [Cohere Rerank](https://cohere.com/rerank) | Cohere | $2.00 / 1,000 searches ($0.002/search) | Free trial API key: 1,000 requests/month (rate limit 10 RPM, non-production) | General-purpose reranking | Multilingual reranking, search, RAG and semi-structured data |
+| [Voyage AI Rerank](https://www.voyageai.com/) | Voyage AI | $0.02 / 1M tokens (rerank-3-lite); $0.05 / 1M tokens (rerank-3) | 200 million free tokens upon sign-up (applicable to rerank-3 / rerank-3-lite, 3 RPM) | High-quality retrieval | Reranking, retrieval optimization and domain-oriented models |
+| [Jina AI Reranker](https://jina.ai/reranker/) | Jina AI | $0.05 / 1M tokens ($50 for 1B tokens top-up bundle) | 10 million free tokens upon key generation (shared pool, 500 RPM / 1M TPM, non-commercial) | Multilingual reranking | Text reranking, multilingual retrieval and long-context use cases |
+| [Pinecone Rerank](https://www.pinecone.io/) | Pinecone | $2.00 / 1,000 requests (Standard plan, $50/month minimum commitment) | Starter plan: 500 rerank requests/month free forever (1 project, 2 GB storage in AWS us-east-1) | Managed retrieval | Reranking integrated with vector search and RAG |
+| [NVIDIA NeMo Retriever](https://developer.nvidia.com/nemo-retriever) | NVIDIA | $1.00 / GPU hour (cloud marketplace pay-as-you-go) or $4,500 / GPU/year (NVIDIA AI Enterprise) | 1,000 free API credits (expandable to 5,000) on build.nvidia.com; 90-day AI Enterprise evaluation license | Enterprise retrieval | Embedding, reranking and retrieval optimization |
+| [Mixedbread AI](https://www.mixedbread.com/) | Mixedbread | $2.50 / 1,000 queries (Toast 1 with Reranking) or $3.50 / 1,000 queries (rerank add-on; Scale plan: $20/month) | Starter plan: $5.00 free credits upon signup (100 RPM, no credit card required) | Retrieval models | Embedding and reranking APIs |
+| [Google Vertex AI Ranking](https://cloud.google.com/vertex-ai) | Google Cloud | $1.00 / 1,000 queries (up to 100 documents per query) | 90-day free trial with $300 credits; monthly free allowance of 80,000 ranking units (or 10,000 queries/month on Agent Search) | Enterprise ranking | Ranking and retrieval optimization for search/RAG |
+| [Amazon Bedrock Rerank](https://aws.amazon.com/bedrock/) | Amazon Web Services | $1.00 / 1,000 queries (Amazon Rerank 1.0); $2.00 / 1,000 queries (Cohere Rerank 3.5) | AWS Free Tier / promotional starter credits ($200 AWS credit for new accounts, valid for 12 months) | Managed RAG retrieval | Native Knowledge Bases integration, semantic filtering |
+| [ZeroEntropy](https://zeroentropy.dev/) | ZeroEntropy | $0.025 / 1M tokens (zerank-2) or $50.00 / month for Team tier | Free forever plan: 500,000 UTF-8 bytes/minute rate limit in fast mode (no credit card required) | Ultra-fast reranking | Sub-millisecond latency reranking, high-throughput batch scoring |
+| [OpenSearch Neural Search](https://opensearch.org/) | OpenSearch / AWS | $0.036 / hour (~$26.00 / month for t3.small.search managed AWS instance) | AWS Free Tier: 750 hours/month of t2/t3.small.search + 10 GB EBS storage free for 12 months | Search + neural retrieval | Neural search, hybrid retrieval and reranking |
+| [Elastic](https://www.elastic.co/) | Elastic | $95.00 / month (Standard tier); $131.00 / month (Platinum tier with native cross-encoder reranking) | 14-day free trial with full access to search and ML reranking features (1 deployment, up to 3 projects) | Search relevance | Semantic search, hybrid search and reranking |
+| [Cerebras](https://www.cerebras.ai/) | Cerebras | $0.10 / 1M tokens (Developer tier, $10 minimum deposit; Llama 3.1 8B at $0.10/1M tokens) | Free forever plan: 1,000,000 tokens/day (resets every 24 hours, 30 RPM, no credit card required) | Fast AI inference | High-throughput inference for custom reranking workloads |
+| [Together AI](https://www.together.ai/) | Together AI | $0.10 / 1M tokens ($5.00 minimum deposit; dedicated GPU instances from $0.90/hour) | $5.00 free credit on signup for API evaluation (60 RPM rate limit) | Model inference | Hosted inference for open reranking models |
+| [Fireworks AI](https://fireworks.ai/) | Fireworks AI | $0.10 / 1M tokens (sub-4B models); $0.20 / 1M tokens (4B–16B models) | $1.00 free credit upon signup for serverless inference testing (rate limited) | Model inference | Hosted inference for open models and custom retrieval stacks |
+| [Hugging Face Inference](https://huggingface.co/inference-api) | Hugging Face | $9.00 / month (PRO subscription); Dedicated Endpoints from $0.06/hr (CPU), $0.50/hr (GPU) | Serverless API: Free forever (~1,000 requests/day, models <10B); $0.10/month credit for providers | Model inference | Hosted inference for open reranking models |
+| [Ragatouille](https://github.com/bclavie/RAGatouille) | Answer.AI / community ecosystem | $0.00 (Open-Source library; self-host on cloud compute from ~$0.03/hr) | Free forever (Apache-2.0 license, unlimited local and self-hosted execution) | ColBERT retrieval | ColBERT-based retrieval and reranking |
+| [Rerankers](https://github.com/AnswerDotAI/rerankers) | AnswerDotAI / community ecosystem | $0.00 (Open-Source library; self-host on cloud compute from ~$0.03/hr) | Free forever (Apache-2.0 license, unlimited local and self-hosted execution) | Unified Reranking API | Hosted & local reranking infrastructure and unified API wrapper |
 
 
 
